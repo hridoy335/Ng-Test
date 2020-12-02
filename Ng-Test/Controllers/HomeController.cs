@@ -13,5 +13,10 @@ namespace Ng_Test.Controllers
         {
             return View();
         }
+
+        public ActionResult MyApp()
+        {
+            return View();
+        }
     }
 }
