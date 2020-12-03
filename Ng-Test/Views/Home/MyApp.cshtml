@@ -12,12 +12,58 @@
     <script src="~/Scripts/angular.js"></script>
     <script src="~/Scripts/CreateJS/app.js"></script>
     <script src="~/Scripts/CreateJS/controller.js"></script>
+    <script src="~/Scripts/CreateJS/directives.js"></script>
+    <style type="text/css">
+        .boldText {
+            font-weight: bold;
+        }
+
+        .italicText {
+            font-style: italic;
+        }
+
+        .colorText {
+            color: red;
+        }
+    </style>
 </head>
 <body ng-app="MyApp">
     <div ng-controller="MyCtrll"> 
         {{message}}
+        <br />
+        <input type="text" ng-model="num" /> {{Squ(num)}}
+    </div>
 
-        <input type="text" ng-model="num" /> {{}}
+    <div ng-controller="MyCtrll2">
+        {{message2}}
+        <br />
+        <select>
+            <option ng-repeat="item in repet">
+                {{item}}
+            </option>
+        </select>
+
+        <br />
+
+        <input type="checkbox" ng-model="check"/>{{check}}
+        <br />
+        <input type="text" ng-disabled="!check"/>
+   <br />
+        <input type="checkbox" name="blod" ng-model="bold" />
+        <input type="checkbox" name="italic" ng-model="italic" />
+        <input type="checkbox" name="color" ng-model="color" />
+
+        <p ng-class="{boldText:bold,italicText:italic,colorText:color}"> i am a boy and i am a student..</p> 
+    </div>
+
+    <div ng-controller="MyCtrll3">
+
+      <input type="button" value="click" ng-click="alertshow()" />
+        <br />
+        <slogan></slogan>
+        
+        <p sloganatt></p>
+        <p sloganclass></p>
     </div>
 </body>
 </html>

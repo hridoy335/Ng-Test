@@ -117,6 +117,7 @@
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\CreateJS\app.js" />
     <Content Include="Scripts\CreateJS\controller.js" />
+    <Content Include="Scripts\CreateJS\directives.js" />
     <Content Include="Scripts\i18n\angular-locale_af-na.js" />
     <Content Include="Scripts\i18n\angular-locale_af-za.js" />
     <Content Include="Scripts\i18n\angular-locale_af.js" />
