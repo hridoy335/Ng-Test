@@ -70,3 +70,7 @@ D:\My Project\Ng-Test\Ng-Test\obj\Debug\Ng-Test.csproj.CoreCompileInputs.cache
 D:\My Project\Ng-Test\Ng-Test\obj\Debug\Ng-Test.csproj.CopyComplete
 D:\My Project\Ng-Test\Ng-Test\obj\Debug\Ng-Test.dll
 D:\My Project\Ng-Test\Ng-Test\obj\Debug\Ng-Test.pdb
+D:\My Project\Ng-Test\Ng-Test\bin\EntityFramework.dll
+D:\My Project\Ng-Test\Ng-Test\bin\EntityFramework.SqlServer.dll
+D:\My Project\Ng-Test\Ng-Test\bin\EntityFramework.xml
+D:\My Project\Ng-Test\Ng-Test\bin\EntityFramework.SqlServer.xml
