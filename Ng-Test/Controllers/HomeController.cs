@@ -15,7 +15,7 @@ namespace Ng_Test.Controllers
         {
             return View();
         }
-
+        // view data 
         public JsonResult GetStudent()
         {
             List<StudentInfo> studentInfos = db.StudentInfoes.ToList();
@@ -28,6 +28,21 @@ namespace Ng_Test.Controllers
 
             }).ToList();
             return Json(sdio, JsonRequestBehavior.AllowGet);  
+        }
+
+        // Insert data .............................
+        public JsonResult InserStudent(StudentInfo studentInfo)
+        {
+            if (studentInfo!=null)
+            {
+                db.StudentInfoes.Add(studentInfo);
+                db.SaveChanges();
+                return Json(new { success = true });
+            }
+            else
+            {
+                return Json(new { success=false});
+            }
         }
         public ActionResult MyApp()
         {
