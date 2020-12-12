@@ -16,4 +16,16 @@
         return request;
     }
 
+    // Update student data
+    this.updatedata = function (student)
+    {
+        var request = $http({
+            method: 'post',
+            url: '../Home/UpdateStudent',
+            data: student
+
+        });
+        return request;
+    }
+
 });

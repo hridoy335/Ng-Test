@@ -44,6 +44,25 @@ namespace Ng_Test.Controllers
                 return Json(new { success=false});
             }
         }
+
+        // Update Student ............
+        public JsonResult UpdateStudent(StudentInfo studentInfo)
+        {
+            StudentInfo studentInfo1 = db.StudentInfoes.Find(studentInfo.StudentId);
+            if (studentInfo1==null)
+            {
+                return Json(new { success=false});
+            }
+            else
+            {
+                //  db.Entry(studentInfo).State = System.Data.Entity.EntityState.Modified;
+                studentInfo1.StudentName =studentInfo.StudentName;
+                studentInfo1.Role =studentInfo.Role;
+                studentInfo1.Address =studentInfo.Address;
+                db.SaveChanges();
+                return Json(new { success=true});
+            }
+        }
         public ActionResult MyApp()
         {
             return View();

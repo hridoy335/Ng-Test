@@ -13,6 +13,7 @@
         );
     }
 
+    // save student data.....
 
     $scope.save = function () {
 
@@ -40,6 +41,33 @@
         $scope.StudentName = "";
         $scope.Role = "";
         $scope.Address = "";
+    }
+
+    // update student data ......
+
+    $scope.update = function () {
+        var student = {
+            StudentId: $scope.StudentId,
+            StudentName: $scope.StudentName,
+            Role: $scope.Role,
+            Address: $scope.Address,
+        }
+        var updaterecord = student_service.updatedata(student);
+        updaterecord.then(function (d) {
+            if (d.data.success == true) {
+                loadstudent();
+                alert("Data update succesfully ...");
+                $scope.resatesave();
+            }
+            else {
+                alert("Data not insert ...");
+            }
+        }, function () {
+                alert("Something problem for update data ...");
+            }
+
+        )
+
     }
 
 });
