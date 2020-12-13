@@ -13,7 +13,7 @@
             <label>StudentId</label>
             <input type="text" ng-model="StudentId" name="StudentId" placeholder="StudentId" />
             <br />
-  
+
             <label>Student Name :</label>
             <input type="text" ng-model="StudentName" name="StudentName" placeholder="StudentName" />
             <br />
@@ -30,7 +30,7 @@
             <button type="button" id="update" ng-click="update()">Update</button>
             <br />
         </form>
-       
+
     </div>
 
 
@@ -41,10 +41,10 @@
         <thead>
             <tr>
 
-            <th>ID</th>
-            <th>Name</th>
-            <th>Roll</th>
-            <th>Address</th>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Roll</th>
+                <th>Address</th>
             </tr>
 
         </thead>
@@ -60,6 +60,9 @@
 
 </div>
 
+
+@*<input type="button" value="Index2" onclick="location.href='<%: Url.Action(" Index","Course" )>'" />*@
+@Html.ActionLink("Course", "Index", "Course")
 
 
 <script src="~/AngularJsApp/module.js"></script>

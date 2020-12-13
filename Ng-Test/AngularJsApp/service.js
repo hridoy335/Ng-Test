@@ -28,4 +28,30 @@
         return request;
     }
 
+    // Get Course Data
+    this.getcourse = function (course) {
+        return $http.get('../Course/GetCourse');
+    }
+
+
+    // Insert course data
+    this.Insercourse = function (course) {
+        var request = $http({
+            method: 'post',
+            url: '../Course/InserCourse',
+            data: course
+        });
+        return request;
+    }
+
+    //update course data
+    this.courseupdate = function (course) {
+        var request = $http({
+            method: 'post',
+            url: '../Course/CourseUpdate',
+            data: course
+        });
+        return request;
+    }
+
 });
